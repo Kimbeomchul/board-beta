@@ -40,11 +40,11 @@ public class Board extends BaseFields{
     @Setter
     @Column(nullable = false, length = 10)
     private String hashtag; // 태그
-
+/*
     @OrderBy("id")
-    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private final Set<Comment> comments = new LinkedHashSet<>();
-
+*/
     public Board(String title, String content, String hashtag) {
         this.title = title;
         this.content = content;
